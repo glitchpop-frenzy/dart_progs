@@ -22,5 +22,40 @@ Dart is expected to help in 2 ways:
 
 ## A Tour of the Dart Language
 
-```main()``` : The special, _required_, top-level function where the app execution starts.
+`main()` : The special, _required_, top-level function where the app execution starts.
+
+
+### Important Concepts
+
+* Everything you can place in a vaiable is an _object_, and every object is an instance of a class.
+* Specifying static types (such as _num_, _String_ and so on) clarifies your intent and enable static checking by tool, but its optional.
+* Dart parses all your code before running it.
+* Dart supports top-level functions (such as `main()`), as well as functions tied to a class or object (_static_ and _instance methods_, respectively).
+* Similarly, Dart supports top-level _variables_, as well as variables tied to a class or object (static and instance variables). Instance variables are sometimes k/n as _field_ or _properties_.
+* Dart doesn;t have keywords, `public`, `protected`, and `private`. If an identifier starts with underscore (\_), it's private to its library.
+* Dart tools report 2 kinds of errors : 
+  -  Warnings : Just hints, don't prevent your program from execution.
+  -  Errors : Can either be compile-time or run-time.
+     *  Compile-time error: prevents the code from executing at all.
+     *  Run-time errors : results in an exception being raised as the code executes.
+* Dart has two _runtime_ modes :
+  - Production Mode : Faster
+  - Checked Mode : Helpful at development.    
+
+**TIP** : Lazy initialization of final variables helps app start up faster.
+
+### Built-in Types
+
+Dart has special support for the following types:
+
+* numbers (include _int_ and _double_)
+* string
+* booleans
+* lists (also known as _arrays_)
+* maps
  
+ Dart support for maps is provided by:
+ * Map Literals : Initialize with normal key-value structure. For ex. `var map = {'first': 'Saksham', 'last': 'Gupta'};`
+ * Map Type : Initialize variable with Map constructor. For ex: `var map = Map();`.
+
+***Note: In Map literals, Key MUST be String. While when a variable is initialized with Map constructor, Key can be ANY object.***
